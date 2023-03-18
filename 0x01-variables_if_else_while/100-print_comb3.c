@@ -6,10 +6,6 @@
 
 #include<stdio.h>
 
-/**main-Entrypoint.Printsallpossibledifferentcombinationsoftwodigits.
-*Return:0onsuccess.
-*/
-
 int main(void)
 {
 	int num1, num2;
