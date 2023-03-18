@@ -1,24 +1,36 @@
+/*
+ * File: 100-print_comb3.c
+ * Auth: [GOLVEN666]
+ * Desc: Prints all possible different combinations of two digits.
+ */
+
 #include <stdio.h>
 
+/**
+ * main - Entry point. Prints all possible different combinations of two digits.
+ * Return: 0 on success.
+ */
 int main(void)
 {
-    for (int i = 0; i < 100; i++)
+    int num1, num2;
+
+    for (num1 = 0; num1 <= 9; num1++)
     {
-        int digit1 = i / 10;
-        int digit2 = i % 10;
-
-        if (digit1 < digit2)
+        for (num2 = num1 + 1; num2 <= 9; num2++)
         {
-            printf("%d%d", digit1, digit2);
+            putchar(num1 + '0');
+            putchar(num2 + '0');
 
-            if (i < 89)
+            if (!(num1 == 8 && num2 == 9))
             {
-                printf(", ");
+                putchar(',');
+                putchar(' ');
             }
         }
     }
 
-    printf("\n");
-    return 0;
+    putchar('\n');
+
+    return (0);
 }
 
