@@ -1,0 +1,5 @@
+#!/bin/bash
+chmod 777 *
+git add .
+git commit -m "+2"
+git push --force origin master
