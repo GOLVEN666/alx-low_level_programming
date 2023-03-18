@@ -1,10 +1,32 @@
 #include <stdio.h>
-#define p putchar
 
-int main() {
-    for(int i=123; i<1000; i++)
-        if(i%10>i/10%10&&i/10%10>i/100&&i%9==0)
-            p(i/100+48),p(i/10%10+48),p(i%10+48),p(i<999?", ":"\n");
-    return 0;
+/**
+ * main - Prints all possible different combinations of three digits
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    int num1, num2, num3;
+
+    for (int i = 0; i <= 999; i++)
+    {
+        num1 = i / 100;         // Get first digit
+        num2 = (i / 10) % 10;   // Get second digit
+        num3 = i % 10;          // Get third digit
+
+        if (num1 < num2 && num2 < num3)
+        {
+            printf("%d%d%d", num1, num2, num3);
+
+            if (i != 789)
+            {
+                printf(", ");
+            }
+        }
+    }
+
+    printf("\n");
+
+    return (0);
 }
-
