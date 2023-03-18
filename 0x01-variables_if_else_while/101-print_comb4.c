@@ -1,32 +1,33 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible different combinations of three digits
- *
- * Return: Always 0 (Success)
- */
+* main - Print all possible different combinations of three digits
+* Return: 0
+**/
+
 int main(void)
 {
-    int num1, num2, num3;
+	int num1, num2, num3;
 
-    for (int i = 0; i <= 999; i++)
-    {
-        num1 = i / 100;         // Get first digit
-        num2 = (i / 10) % 10;   // Get second digit
-        num3 = i % 10;          // Get third digit
+	for (num1 = 48; num1 <= 57; num1++)
+	{
+		for (num2 = num1 + 1; num2 <= 57; num2++)
+		{
+			for (num3 = num2 + 1; num3 <= 57; num3++)
+			{
+				putchar(num1);
+				putchar(num2);
+				putchar(num3);
 
-        if (num1 < num2 && num2 < num3)
-        {
-            printf("%d%d%d", num1, num2, num3);
+				if (!(num1 == 55 && num2 == 56 && num3 == 57))
+				{
 
-            if (i != 789)
-            {
-                printf(", ");
-            }
-        }
-    }
-
-    printf("\n");
-
-    return (0);
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
