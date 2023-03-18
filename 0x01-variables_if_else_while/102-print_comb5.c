@@ -10,17 +10,17 @@
 
 int main(void)
 {
-    int i, j;
-
-    for (i = 0; i < 100; i++)
-    {
-        for (j = i + 1; j < 100; j++)
-        {
-            printf("%02d\t%02d", i, j);
-            if (i != 98 || j != 99)
-                printf(",\t");
-        }
-    }
-    printf("\n");
-    return (0);
+	int i, j;
+	
+	for (i = 0; i < 100; i++)
+	{
+		for (j = i + 1; j < 100; j++)
+		{
+			printf("%02d %02d", i, j);
+			if (i != 98 || j != 99)
+				printf(", ");
+		}
+	}
+	printf("\n");
+	return (0);
 }
