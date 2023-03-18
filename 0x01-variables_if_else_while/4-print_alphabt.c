@@ -1,19 +1,24 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
-* main - Prints all numbers of base 10
-* Return: 0
-**/
+ * main - Entry point
+ *
+ * Description: print all aplhabet letters except q and e
+ *
+ * Return: Always 0 (Success)
+*/
 
 int main(void)
 {
-	char num;
+	char ch = 'a';
 
-	for (num = 48; num <= 57; num++)
+	while (ch <= 'z')
 	{
-		putchar(num);
+		if (ch == 'e' || ch == 'q')
+			++ch;
+		putchar(ch);
+		++ch;
 	}
-
 	putchar('\n');
 
 	return (0);
