@@ -6,6 +6,11 @@
 
 #include<stdio.h>
 
+/**
+* main - Prints all posible different combinations of two digits
+* Return: 0
+**/
+
 int main(void)
 {
 	int num1, num2;
