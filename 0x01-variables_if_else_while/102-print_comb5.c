@@ -1,6 +1,5 @@
 /**
  * main - Entry point
- *
  * Description: This program prints all possible
  * different combinations of two digits from 00 to 99.
  * Return: 0
