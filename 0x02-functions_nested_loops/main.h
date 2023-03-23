@@ -1,0 +1,13 @@
+int _putchar(char a);
+void print_alphabet(void);
+void print_alphabet(void);
+int _islower(int a);
+int isalpha(int a);
+int print_sign(int n);
+int _abs(int);
+int print_last_digit(int);
+int jack_bauer(void);
+void times_table(void);
+int add(int int);
+void print_to_98(int n);
+void print_times_table(int n);
