@@ -1,0 +1,1 @@
+Welcome to the world of debugging in C programming! In the 0x03-debugging repository, you will learn how to debug and fix common errors in your code. From infinite loops to logical errors, these tasks are sure to sharpen your debugging skills and take your programming abilities to the next level.
