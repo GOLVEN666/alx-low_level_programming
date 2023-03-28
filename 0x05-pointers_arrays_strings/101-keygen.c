@@ -4,23 +4,22 @@
 /**
  * main - generates keygen.
  * Return: 0 Always.
- * 
  */
 int main(void)
 {
-	int sum = 0;
-	int r;
+	int r = 0, c = 0;
 	time_t t;
 
-	srand((unsigned int) time(&t)); // Seed random number generator
-
-	while (sum < 2772) {
-		r = rand() % 128; // Generate a random number between 0 and 127
-		putchar(r);
-		sum += r;
+	srand((unsigned int) time(&t));
+	while (c < 2772)
+	{
+		r = rand() % 128;
+		if ((c + r) > 2772)
+			break;
+		c = c + r;
+		printf("%c", r);
 	}
-	putchar(2772 - sum); // Add remaining character to sum
-
-	return 0;
+	printf("%c\n", (2772 - c));
+	return (0);
 }
 
